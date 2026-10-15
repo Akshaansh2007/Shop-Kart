@@ -19,9 +19,12 @@ const app = express();
 app.use(express.json());
 app.use(cookieParser());
 app.use(cors({
-  origin:"http://localhost:5173",
-  credentials: true
-}))
+    origin: [
+        "http://localhost:5173",
+        "https://shop-kart-pi-seven.vercel.app"
+    ],
+    credentials: true
+}));
 
 // Routes
 app.use("/customers", customerRoutes);
