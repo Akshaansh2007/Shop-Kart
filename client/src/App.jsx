@@ -14,6 +14,7 @@ import { CartProvider } from "./context/CartContext";
 
 function App() {
   return (<BrowserRouter> <CartProvider> <Routes>
+    <Route path="/" element={<Home />} />
     <Route path="/register" element={<Register />} />
     <Route path="/login" element={<Login />} />
     <Route path="/home" element={<Home />} />
